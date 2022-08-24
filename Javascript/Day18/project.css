@@ -1,0 +1,13 @@
+.winningTeam{
+    background-color: chartreuse;
+    margin:10px;
+    padding:10px;
+
+}
+.losingTeam{
+    background-color: red;
+    margin:10px;
+    padding:10px;
+
+
+}
