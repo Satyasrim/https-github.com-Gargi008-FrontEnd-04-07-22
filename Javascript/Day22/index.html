@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <title>SetTimeout</title>
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+<body>
+    <h1>uhhh , this is my super Clock</h1>
+
+    <h2 id="time"></h2>
+
+    <script>
+      
+      function myName(fname,lname){
+            console.log(`${fname} ${lname}`)
+        } 
+
+      /*   myName("Gargi","Chakraborty") */
+      // setTimeout - if we wanna run the function after a certain time / or with some delay
+
+      /*   const temp=setTimeout(myName,4000,"Gargi","Chakraborty") // don't call the function //1
+        console.log(`temp ${temp}`)
+        clearTimeout(temp) 
+        console.log(`temp ${temp}`) */
+
+        //if u wanna run a function repeatedly after a certain amount of time
+        /* const temp1=setInterval(myName,2000,"Gargi","Chakraborty")
+        clearInterval(temp1) */
+        function myClock(){
+            const time=document.querySelector('#time')
+            let today= new Date();
+            let timeNow=`${today.getHours()}:${today.getMinutes()}:${today.getSeconds()} `
+            let date=`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()} `
+            let output=`today is ${date} and the clock says it's ${timeNow}`
+            time.innerHTML=output
+
+           /*  sec=today.getSeconds() //1 , 2 , 3, 4.......9, 10,11
+            sec=(sec<10)? "0"+sec: sec
+ */
+        }
+
+        setInterval(myClock,1000)
+
+
+    </script>
+
+</body>
+</html>
